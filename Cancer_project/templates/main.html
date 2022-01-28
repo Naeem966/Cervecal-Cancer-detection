@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cancer Disease Predictor</title>
+ <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Website Title -->
+
+  <div class="container">
+    <h2 class='container-heading'><span class="heading_font">Cancer Disease Predictor</span></h2>
+    <div class='description'>
+      <p>A Machine Learning Web Application that predicits chances of having Cancer or Not!</p><br>
+        <p>(Note:This model is 94.67% accurate)</p>
+    </div>
+  </div>
+
+  <!-- Text Area -->
+  <div class="ml-container">
+    <form action="{{ url_for('predict')}}" method="POST"> 
+
+<div class="left">      
+<label for="age">Age</label>
+<input type="text" id="age" name="age" placeholder="Your age.."required>
+<br><br>
+
+<label for="partners">No of Partners</label>
+        <input type="text" id="partners" name="partners" placeholder="No of Partners..">
+<br><br>
+
+<label for="pregnancies">No of pregnancies</label>
+        <input type="text" id="pregnancies" name="pregnancies" placeholder="No of Pregnancies..">
+<br><br>
+
+<label for="Smokes">Smoking</label>
+        <input type="text" id="Smokes" name="Smokes" placeholder="Smoking 1,0">
+<br><br>
+
+<label for="Smokes2">Smoking years</label>
+        <input type="text" id="Smokes2" name="Smokes2" placeholder="Smoking Years">
+<br><br>
+<label for="Contraceptives">Contraceptives</label>
+        <input type="text" id="Contraceptives" name="Contraceptives" placeholder="Contraceptives..">
+<br><br>
+
+<label for="Contraceptives _years">Contraceptives _years</label>
+        <input type="text" id="Contraceptives _years" name="Contraceptives _years" placeholder="Contraceptives _years">
+<br><br>
+
+<label for="STDs">STDs</label>
+        <input type="text" id="STDs" name="STDs" placeholder="STDs..">
+<br><br>
+
+<label for="STDs_number">STDs_number</label>
+        <input type="text" id="STDs_number" name="STDs_number" placeholder="STDs..">
+<br><br>
+
+<label for="condylomatosis">condylomatosis</label>
+        <input type="text" id="condylomatosis" name="condylomatosis" placeholder="condylomatosis..">
+<br><br>
+
+<label for="cervical_condylomatosis">cervical_condylomatosis</label>
+        <input type="text" id="cervical_condylomatosis" name="cervical_condylomatosis" placeholder="cervical_condylomatosis">
+<br><br>
+
+<label for="perineal_condylomatosis">perineal_condylomatosis</label>
+        <input type="text" id="perineal_condylomatosis" name="perineal_condylomatosis" placeholder="cervical_condylomatosis">
+<br><br>
+
+<label for="syphilis">syphilis</label>
+        <input type="text" id="syphilis" name="syphilis" placeholder="syphilis..">
+<br><br>
+
+<label for="pelvic_inflammatory">pelvic_inflammatory</label>
+        <input type="text" id="pelvic_inflammatory" name="pelvic_inflammatory" placeholder="pelvic_inflammatory..">
+<br><br>
+
+<label for="genital_herpes">genital_herpes</label>
+        <input type="text" id="genital_herpes" name="genital_herpes" placeholder="genital_herpes..">
+<br><br>
+
+<label for="molluscum_contagiosum">molluscum_contagiosum</label>
+        <input type="text" id="molluscum_contagiosum" name="molluscum_contagiosum" placeholder="molluscum_contagiosum">
+<br><br>
+
+<label for="AIDS">AIDS</label>
+        <input type="text" id="AIDS" name="AIDS" placeholder="AIDS..">
+<br><br>
+
+<label for="HIV">HIV</label>
+        <input type="text" id="HIV" name="HIV" placeholder="HIV..">
+<br><br>
+
+<label for="Hepatitis_B">Hepatitis_B</label>
+        <input type="text" id="Hepatitis_B" name="Hepatitis_B" placeholder="Hepatitis_B..">
+<br><br>
+
+<label for="HPV">HPV</label>
+        <input type="text" id="HPV" name="HPV" placeholder="HPV">
+<br><br>
+
+<label for="Dx_Cancer">Dx_Cancer</label>
+        <input type="text" id="Dx_Cancer" name="Dx_Cancer" placeholder="Dx_Cancer">
+<br><br>
+
+<label for="Dx_HPV">Dx_HPV</label>
+        <input type="text" id="Dx_HPV" name="Dx_HPV" placeholder="Dx_HPV">
+
+<br><br>
+
+</div>
+
+<div>
+      <input type="submit" class="my-cta-button" value="Predict"> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="reset" class="my-cta-button" value="Reset" />
+    </form>
+
+</div>
+
+<br>
+
+  <!-- Footer -->
+  <div class='footer'>
+    <p class='footer-description'>All rights Reserved!</p>
+  </div>
+
+</body>
+
+</html>
